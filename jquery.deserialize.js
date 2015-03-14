@@ -1,6 +1,6 @@
 (function ($) {
     $.deserialize = function (str, options) {
-        var pairs = str.split(/&amp;|&/i),
+        var pairs = str.split(/&amp;|&|\r\n|\r|\n/i),
             h = {},
             options = options || {};
         for(var i = 0; i < pairs.length; i++) {
